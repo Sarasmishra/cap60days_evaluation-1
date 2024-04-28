@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee management</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Employee management System</h1>
+    <div>
+    <label for="departmentfilter">filter by department</label>
+    <select name="" id="departmentfilter" onclick="applyfilter()">
+        <option value="">Select Department</option>
+        <option value="hr">hr</option>
+        <option value="finance">finance</option>
+        <option value="marketing">marketing</option>
+        <option value="engineering">engineering</option>
+        <option value="operations">operations</option>
+    </select>
+
+    <label for="genderfilter">filter by gender:</label>
+    <select name="" id="genderfilter" onclick="applyfilter()">
+        <option value="">All</option>
+        <option value="male">male</option>
+        <option value="female">female</option>
+    </select>
+
+    <label for="sort">Sort:</label>
+    <select name="" id="sort" onclick="applyfilter()">
+        <option value="">All</option>
+        <option value="asc">Asceding</option>
+        <option value="desc">Descending</option>
+    </select>
+    </div>
+
+    <table id="employeeTable">
+        <thead >
+            <tr style="font-size: 36px;">S.no.</tr>
+            <tr>Name</tr>
+            <tr>Gender</tr>
+            <tr>Department</tr>
+            <tr>Salary</tr>
+        </thead>
+        <tbody id="employeeBody"></tbody>
+    </table>
+    <div id="pagination">
+        <button onclick="Navigation(-1)">Previous</button>
+        <button onclick="Navigation(+1)">Next</button>
+
+    </div>
+</body>
+</html>
+<script src="script.js"></script>
